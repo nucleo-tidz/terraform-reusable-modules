@@ -41,13 +41,13 @@ jobs:
       uses: hashicorp/setup-terraform@v2
    
     - name: Terraform Init
-      working-directory: environments/Test
+      working-directory: environments/test
       run: terraform init  -backend-config=key="test.tfstate"
         
     - name: Terraform Plan
-      working-directory: environments/Test
+      working-directory: environments/test
       run: terraform plan -var-file="test.tfvars" -input=false
 
     - name: Terraform Apply  
-      working-directory: environments/Test
+      working-directory: environments/test
       run: terraform apply -var-file="test.tfvars" -input=false -auto-approve
