@@ -1,7 +1,7 @@
 resource "azurerm_key_vault" "nucleo_key_vault" {
   name                        = var.keyvault_name
   location                    = var.location
-  resource_group_name         = var.kv_resource_group_name
+  resource_group_name         = var.resource_group_name
   enabled_for_disk_encryption = true
   tenant_id                   = var.tenant_id
   soft_delete_retention_days  = 7
