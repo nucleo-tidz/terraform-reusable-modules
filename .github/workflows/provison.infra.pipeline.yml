@@ -46,8 +46,8 @@ jobs:
         
     - name: Terraform Plan
       working-directory: environments/test
-      run: terraform plan -var-file="test.tfvars" -input=false
+      run: terraform plan -var-file="terraform.tfvars" -input=false
 
     - name: Terraform Apply  
       working-directory: environments/test
-      run: terraform apply -var-file="test.tfvars" -input=false -auto-approve
+      run: terraform apply -var-file="terraform.tfvars" -input=false -auto-approve
